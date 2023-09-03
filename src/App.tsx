@@ -5,7 +5,16 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <div>Hello World!</div>
+      <div className="header">
+        <h3 className="title">The Ultimate ToDo-List</h3>
+      </div>
+      <div className="inputMask">
+        <label htmlFor="task">Task</label>
+        <input type="text" id="task" />
+        <label htmlFor="deadline">Deadline</label>
+        <input type="text" id="deadline" />
+      </div>
+      <div className="todoList"></div>
     </div>
   );
 }
