@@ -10,9 +10,19 @@ function App() {
       </div>
       <div className="inputMask">
         <label htmlFor="task">Task</label>
-        <input type="text" id="task" className="rounded" />
+        <input
+          type="text"
+          id="task"
+          className="rounded  w-auto min-w-[300px]"
+          placeholder="Write your task here..."
+        />
         <label htmlFor="deadline">Deadline</label>
-        <input type="text" id="deadline" className="rounded" />
+        <input
+          type="text"
+          id="deadline"
+          className="rounded w-auto min-w-[300px]"
+          placeholder="When should this task be completed?"
+        />
       </div>
       <div className="todoList"></div>
     </div>
