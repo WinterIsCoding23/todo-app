@@ -6,3 +6,19 @@
 body{
   @apply bg-[#FFBB5C] text-[#C63D2F] 
 }
+
+.App{
+  @apply m-5 flex flex-col justify-center content-center
+}
+
+.header{
+  @apply flex flex-col items-center justify-center border-solid border-2 border-gray-900 rounded
+}
+
+.header h1{
+  @apply font-extrabold
+}
+
+.inputMask{
+  @apply flex flex-col items-center justify-center border-solid border-2 border-gray-900 rounded
+}
