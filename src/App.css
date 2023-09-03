@@ -12,7 +12,7 @@ body{
 }
 
 .header{
-  @apply flex flex-col items-center justify-center border-solid border-2 border-gray-900 rounded
+  @apply p-5 flex flex-col items-center justify-center border-solid border-2 border-gray-900 rounded
 }
 
 .header h1{
@@ -20,5 +20,5 @@ body{
 }
 
 .inputMask{
-  @apply flex flex-col items-center justify-center border-solid border-2 border-gray-900 rounded
+  @apply p-5 flex flex-col items-center justify-center border-solid border-2 border-gray-900 rounded
 }
