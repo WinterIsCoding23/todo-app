@@ -23,6 +23,7 @@ function App() {
           className="rounded w-auto min-w-[300px]"
           placeholder="When should this task be completed?"
         />
+        <button className="inputButton">OK</button>
       </div>
       <div className="todoList"></div>
     </div>
