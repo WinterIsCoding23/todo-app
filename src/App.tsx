@@ -10,9 +10,9 @@ function App() {
       </div>
       <div className="inputMask">
         <label htmlFor="task">Task</label>
-        <input type="text" id="task" />
+        <input type="text" id="task" className="rounded" />
         <label htmlFor="deadline">Deadline</label>
-        <input type="text" id="deadline" />
+        <input type="text" id="deadline" className="rounded" />
       </div>
       <div className="todoList"></div>
     </div>
