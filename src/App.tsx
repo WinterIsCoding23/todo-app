@@ -1,6 +1,7 @@
 import React from 'react';
 import "./index.css";
 import "./App.css";
+import TaskList from "./Components/TaskList";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
         />
         <button className="inputButton">OK</button>
       </div>
-      <div className="todoList"></div>
+      <TaskList />
     </div>
   );
 }
