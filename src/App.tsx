@@ -5,6 +5,19 @@ import TaskList from "./Components/TaskList";
 
 function App() {
   const [formInput, setFormInput] = useState({ task: "", deadline: "" });
+  const [todo, setTodo] = useState<{ newTask: string; newDeadline: string }[]>(
+    []
+  );
+
+  function addTask(e: FormEvent<HTMLFormElement>): void {
+    const newTask = {
+      newTask: formInput.task,
+      newDeadline: formInput.deadline,
+    };
+
+    setTodo([...todo, newTask]);
+    console.log("newTask:", newTask);
+  }
 
   function handleSubmit(e: FormEvent<HTMLFormElement>): void {
     e.preventDefault();
@@ -22,6 +35,7 @@ function App() {
     // );
     // console.log(formJson.task, formJson.deadline);
 
+    addTask(e);
     setFormInput({ task: "", deadline: "" });
   }
 
@@ -61,7 +75,7 @@ function App() {
           OK
         </button>
       </form>
-      <TaskList formInput={formInput} />
+      <TaskList todo={todo} />
     </div>
   );
 }
