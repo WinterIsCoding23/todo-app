@@ -4,18 +4,21 @@ interface Props {
 
 const TaskList = ({ todo }: Props) => {
   console.log(todo, "in TaskList");
+
+  const sortedTodo = [...todo].reverse();
+
   return (
     <div className="taskContainer">
       <h3>Here is the list of open ToDo-tasks:</h3>
-      {todo.length > 0 ? (
-        todo.map((task, index) => (
+      {sortedTodo.length > 0 ? (
+        sortedTodo.map((task, index) => (
           <div key={index}>
             <p>{task.newTask}</p>
             <p>{task.newDeadline}</p>
           </div>
         ))
       ) : (
-        <p>"You're lucky, looks like you don't have anything to do."</p>
+        <p>"Don't have anything to do? Get moving and add some tasks!"</p>
       )}
     </div>
   );
