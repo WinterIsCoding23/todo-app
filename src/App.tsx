@@ -10,10 +10,22 @@ function App() {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
+    const taskInput = form.querySelector(
+      'input[name="task"]'
+    ) as HTMLInputElement;
+    const deadlineInput = form.querySelector(
+      'input[name="deadline"]'
+    ) as HTMLInputElement;
+
     const formJson: Record<string, FormDataEntryValue> = Object.fromEntries(
       formData.entries()
     );
-    console.log(formJson);
+    console.log(formJson.task, formJson.deadline);
+
+    if (taskInput && deadlineInput) {
+      taskInput.value = "";
+      deadlineInput.value = "";
+    }
   }
 
   return (
