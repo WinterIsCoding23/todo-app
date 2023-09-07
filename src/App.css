@@ -32,5 +32,5 @@ body{
 }
 
 .taskCard{
-  @apply bg-[#E25E3E] text-black
+  @apply bg-[#E25E3E] text-black flex flex-col items-center justify-center
 }
