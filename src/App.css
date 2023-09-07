@@ -28,7 +28,7 @@ body{
 }
 
 .taskContainer{
-  @apply mt-5 border-solid border-2 border-gray-900 rounded grid grid-cols-4 gap-4
+  @apply mt-5 border-solid border-2 border-gray-900 rounded grid grid-cols-4 gap-4 items-center justify-center
 }
 
 .taskCard{
@@ -41,4 +41,12 @@ body{
 
 .taskButtons{
   @apply flex flex-col items-center justify-center rounded
+}
+
+.editButton{
+  @apply px-2 border-solid border-2 border-gray-900 rounded
+}
+
+.deleteButton{
+  @apply px-2 border-solid border-2 border-gray-900 rounded
 }

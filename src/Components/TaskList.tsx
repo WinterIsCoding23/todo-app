@@ -12,19 +12,21 @@ const TaskList = ({ todo }: Props) => {
       {/* <h3>Here is the list of open ToDo-tasks:</h3> */}
       {sortedTodo.length > 0 ? (
         sortedTodo.map((task, index) => (
-          <div className="taskCard">
-            <div className="taskDescription" key={index}>
+          <div key={index} className="taskCard">
+            <div className="taskDescription">
               <p className="font-bold">{task.newTask}</p>
               <p>{task.newDeadline}</p>
             </div>
             <div className="taskButtons">
-              <button>Edit</button>
-              <button>Delete</button>
+              <button className="editButton">Edit</button>
+              <button className="deleteButton">Delete</button>
             </div>
           </div>
         ))
       ) : (
-        <p>"Don't have anything to do? Get moving and add some tasks!"</p>
+        <p className="col-span-4 text-center">
+          "Don't have anything to do? Get moving and add some tasks!"
+        </p>
       )}
     </div>
   );
