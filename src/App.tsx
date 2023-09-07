@@ -4,8 +4,7 @@ import "./App.css";
 import TaskList from "./Components/TaskList";
 
 function App() {
-  const [taskInput, setTaskInput] = useState("");
-  const [deadlineInput, setDeadlineInput] = useState("");
+  const [formInput, setFormInput] = useState({ task: "", deadline: "" });
 
   function handleSubmit(e: FormEvent<HTMLFormElement>): void {
     e.preventDefault();
@@ -15,15 +14,15 @@ function App() {
 
     const taskValue = formData.get("task") as string;
     const deadlineValue = formData.get("deadline") as string;
-    console.log(taskValue, deadlineValue);
+    console.log("Task:", taskValue);
+    console.log("Deadline:", deadlineValue);
 
     // const formJson: Record<string, FormDataEntryValue> = Object.fromEntries(
     //   formData.entries()
     // );
     // console.log(formJson.task, formJson.deadline);
 
-    setTaskInput("");
-    setDeadlineInput("");
+    setFormInput({ task: "", deadline: "" });
   }
 
   return (
@@ -39,9 +38,9 @@ function App() {
           type="text"
           id="task"
           name="task"
-          value={taskInput}
-          onChange={(e) => setTaskInput(e.target.value)}
-          className="rounded  w-auto min-w-[300px]"
+          value={formInput.task}
+          onChange={(e) => setFormInput({ ...formInput, task: e.target.value })}
+          className="rounded w-auto min-w-[300px]"
           placeholder="Write your task here..."
         />
         <label htmlFor="deadline" className="my-2 font-bold">
@@ -51,8 +50,10 @@ function App() {
           type="text"
           id="deadline"
           name="deadline"
-          value={deadlineInput}
-          onChange={(e) => setDeadlineInput(e.target.value)}
+          value={formInput.deadline}
+          onChange={(e) =>
+            setFormInput({ ...formInput, deadline: e.target.value })
+          }
           className="rounded w-auto min-w-[300px]"
           placeholder="When should this task be completed?"
         />
@@ -60,7 +61,7 @@ function App() {
           OK
         </button>
       </form>
-      <TaskList taskInput={taskInput} deadlineInput={deadlineInput} />
+      <TaskList formInput={formInput} />
     </div>
   );
 }
