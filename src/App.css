@@ -28,9 +28,9 @@ body{
 }
 
 .taskContainer{
-  @apply mt-5 flex flex-col items-center justify-center border-solid border-2 border-gray-900 rounded grid grid-cols-4 gap-4
+  @apply mt-5 border-solid border-2 border-gray-900 rounded grid grid-cols-4 gap-4
 }
 
 .taskCard{
-  @apply bg-[#E25E3E] text-black flex flex-col items-center justify-center
+  @apply p-5 bg-[#E25E3E] text-black flex flex-col items-center justify-center rounded
 }
