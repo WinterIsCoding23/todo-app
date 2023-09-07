@@ -32,5 +32,13 @@ body{
 }
 
 .taskCard{
-  @apply p-5 bg-[#E25E3E] text-black flex flex-col items-center justify-center rounded
+  @apply flex bg-[#E25E3E] text-black
+}
+
+.taskDescription{
+  @apply p-4 flex flex-col items-center justify-center rounded
+}
+
+.taskButtons{
+  @apply flex flex-col items-center justify-center rounded
 }

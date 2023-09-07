@@ -12,9 +12,15 @@ const TaskList = ({ todo }: Props) => {
       {/* <h3>Here is the list of open ToDo-tasks:</h3> */}
       {sortedTodo.length > 0 ? (
         sortedTodo.map((task, index) => (
-          <div className="taskCard" key={index}>
-            <p className="font-bold">{task.newTask}</p>
-            <p>{task.newDeadline}</p>
+          <div className="taskCard">
+            <div className="taskDescription" key={index}>
+              <p className="font-bold">{task.newTask}</p>
+              <p>{task.newDeadline}</p>
+            </div>
+            <div className="taskButtons">
+              <button>Edit</button>
+              <button>Delete</button>
+            </div>
           </div>
         ))
       ) : (
