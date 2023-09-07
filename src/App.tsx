@@ -9,7 +9,7 @@ function App() {
       <div className="header">
         <h1 className="title">The Ultimate ToDo-List</h1>
       </div>
-      <div className="inputMask">
+      <form className="inputMask">
         <label htmlFor="task" className="my-2 font-bold">
           Task
         </label>
@@ -28,8 +28,10 @@ function App() {
           className="rounded w-auto min-w-[300px]"
           placeholder="When should this task be completed?"
         />
-        <button className="inputButton">OK</button>
-      </div>
+        <button className="inputButton" onClick={}>
+          OK
+        </button>
+      </form>
       <TaskList />
     </div>
   );
