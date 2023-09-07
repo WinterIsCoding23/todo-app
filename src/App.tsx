@@ -60,7 +60,7 @@ function App() {
           OK
         </button>
       </form>
-      <TaskList />
+      <TaskList taskInput={taskInput} deadlineInput={deadlineInput} />
     </div>
   );
 }
