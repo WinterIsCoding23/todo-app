@@ -13,7 +13,7 @@ const TaskList = ({ todo }: Props) => {
       {sortedTodo.length > 0 ? (
         sortedTodo.map((task, index) => (
           <div className="taskCard" key={index}>
-            <p>{task.newTask}</p>
+            <p className="font-bold">{task.newTask}</p>
             <p>{task.newDeadline}</p>
           </div>
         ))
