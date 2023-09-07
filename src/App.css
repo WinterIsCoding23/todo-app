@@ -28,11 +28,11 @@ body{
 }
 
 .taskContainer{
-  @apply mt-5 border-solid border-2 border-gray-900 rounded grid grid-cols-4 gap-4 items-center justify-center
+  @apply mt-5 border-solid border-2 border-gray-900 rounded grid grid-flow-dense grid-cols-4 gap-4 items-center justify-center
 }
 
 .taskCard{
-  @apply flex bg-[#E25E3E] text-black
+  @apply flex bg-[#FF9B50] text-black
 }
 
 .taskDescription{
@@ -44,9 +44,9 @@ body{
 }
 
 .editButton{
-  @apply px-2 border-solid border-2 border-gray-900 rounded
+  @apply px-2 border-solid border-2 border-gray-900 rounded bg-[#E25E3E]
 }
 
 .deleteButton{
-  @apply px-2 border-solid border-2 border-gray-900 rounded
+  @apply px-2 border-solid border-2 border-gray-900 rounded bg-[#E25E3E]
 }
