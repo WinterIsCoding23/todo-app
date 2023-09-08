@@ -35,7 +35,9 @@ function App() {
     // );
     // console.log(formJson.task, formJson.deadline);
 
-    addTask(e);
+    if (taskValue !== "" && deadlineValue !== "") {
+      addTask(e);
+    }
     setFormInput({ task: "", deadline: "" });
   }
 
@@ -56,6 +58,7 @@ function App() {
           onChange={(e) => setFormInput({ ...formInput, task: e.target.value })}
           className="rounded w-auto min-w-[300px]"
           placeholder="Write your task here..."
+          required
         />
         <label htmlFor="deadline" className="my-2 font-bold">
           Deadline
@@ -70,6 +73,7 @@ function App() {
           }
           className="rounded w-auto min-w-[300px]"
           placeholder="When should this task be completed?"
+          required
         />
         <button type="submit" className="inputButton">
           OK

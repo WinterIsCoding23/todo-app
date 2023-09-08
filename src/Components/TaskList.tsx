@@ -3,13 +3,10 @@ interface Props {
 }
 
 const TaskList = ({ todo }: Props) => {
-  console.log(todo, "in TaskList");
-
   const sortedTodo = [...todo].reverse();
 
   return (
     <div className="taskContainer">
-      {/* <h3>Here is the list of open ToDo-tasks:</h3> */}
       {sortedTodo.length > 0 ? (
         sortedTodo.map((task, index) => (
           <div key={index} className="taskCard">
