@@ -4,20 +4,28 @@ import "./App.css";
 import TaskList from "./Components/TaskList";
 
 function App() {
-  const [formInput, setFormInput] = useState({ task: "", deadline: "" });
+  const [formInput, setFormInput] = useState({ id: 0, task: "", deadline: "" });
   const [todo, setTodo] = useState<{ newTask: string; newDeadline: string }[]>(
     []
   );
+  const [id, setId] = useState(0);
 
   function addTask(e: FormEvent<HTMLFormElement>): void {
     const newTask = {
       newTask: formInput.task,
       newDeadline: formInput.deadline,
+      newId: id,
     };
 
     setTodo([...todo, newTask]);
     console.log("newTask:", newTask);
+    console.log("todo:", todo);
+
+    setId(id + 1);
+    console.log("id", id);
   }
+
+  function deleteTask(e: FormEvent<HTMLFormElement>, index: number): void {}
 
   function handleSubmit(e: FormEvent<HTMLFormElement>): void {
     e.preventDefault();
@@ -38,7 +46,7 @@ function App() {
     if (taskValue !== "" && deadlineValue !== "") {
       addTask(e);
     }
-    setFormInput({ task: "", deadline: "" });
+    setFormInput({ id, task: "", deadline: "" });
   }
 
   return (
