@@ -30,6 +30,24 @@ function App() {
     setTodo(updatedTodos);
   }
 
+  const editTask = (id: number): void => {
+    const taskToEdit = todo.find((task) => task.id === id);
+
+    if (taskToEdit) {
+      const newTask = prompt("Edit Task:", taskToEdit.newTask);
+      const newDeadline = prompt("Edit Deadline:", taskToEdit.newDeadline);
+
+      if (newTask === null || newDeadline === null) {
+        return;
+      }
+
+      taskToEdit.newTask = newTask;
+      taskToEdit.newDeadline = newDeadline;
+
+      setTodo([...todo]);
+    }
+  };
+
   function handleSubmit(e: FormEvent<HTMLFormElement>): void {
     e.preventDefault();
 
@@ -90,7 +108,7 @@ function App() {
           OK
         </button>
       </form>
-      <TaskList todo={todo} deleteTask={deleteTask} />
+      <TaskList todo={todo} deleteTask={deleteTask} editTask={editTask} />
     </div>
   );
 }
