@@ -1,8 +1,9 @@
 interface Props {
-  todo: { newTask: string; newDeadline: string }[];
+  todo: { id: number; newTask: string; newDeadline: string }[];
+  deleteTask: (id: number) => void;
 }
 
-const TaskList = ({ todo }: Props) => {
+const TaskList = ({ todo, deleteTask }: Props) => {
   const sortedTodo = [...todo].reverse();
 
   return (
@@ -16,7 +17,12 @@ const TaskList = ({ todo }: Props) => {
             </div>
             <div className="taskButtons">
               <button className="editButton">Edit</button>
-              <button className="deleteButton">Delete</button>
+              <button
+                className="deleteButton"
+                onClick={() => deleteTask(task.id)}
+              >
+                Delete
+              </button>
             </div>
           </div>
         ))
