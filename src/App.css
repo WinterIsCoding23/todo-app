@@ -44,7 +44,7 @@ body{
 
 /*------------------------TaskList---------------------- */
 .taskContainer{
-  @apply min-w-min rounded grid grid-flow-dense grid-flow-row auto-rows-min sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 items-center justify-center
+  @apply min-w-min rounded grid grid-flow-row auto-rows-min sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 items-center justify-center
 }
 
 .taskCard{
