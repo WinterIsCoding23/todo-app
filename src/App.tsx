@@ -18,11 +18,7 @@ function App() {
     };
 
     setTodo([...todo, newTask]);
-    console.log("newTask:", newTask);
-    console.log("todo:", todo);
-
     setId(id + 1);
-    console.log("id", id);
   }
 
   function deleteTask(id: number): void {
@@ -56,8 +52,6 @@ function App() {
 
     const taskValue = formData.get("task") as string;
     const deadlineValue = formData.get("deadline") as string;
-    console.log("Task:", taskValue);
-    console.log("Deadline:", deadlineValue);
 
     // const formJson: Record<string, FormDataEntryValue> = Object.fromEntries(
     //   formData.entries()

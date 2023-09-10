@@ -6,7 +6,6 @@ interface Props {
 
 const TaskList = ({ todo, deleteTask, editTask }: Props) => {
   const sortedTodo = [...todo].reverse();
-  console.log("sortedTodo", sortedTodo);
 
   return (
     <div className="taskContainer">
