@@ -32,7 +32,7 @@ body{
 }
 
 .taskCard{
-  @apply flex flex-col items-center justify-center bg-[#FF9B50] text-black rounded
+  @apply flex flex-col items-center justify-center bg-[#FF9B50] text-black rounded shadow-2xl
 }
 
 .taskDescription{
@@ -44,9 +44,9 @@ body{
 }
 
 .editButton{
-  @apply mx-2 px-2 border-solid border-2 border-gray-900 rounded bg-[#FFBB5C]
+  @apply mx-2 px-2 rounded bg-[#FFBB5C] shadow-2xl
 }
 
 .deleteButton{
-  @apply px-2 border-solid border-2 border-gray-900 rounded bg-[#E25E3E]
-}
+  @apply px-2 rounded bg-[#E25E3E] shadow-2xl
+} 
