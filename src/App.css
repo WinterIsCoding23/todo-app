@@ -32,7 +32,7 @@ body{
 }
 
 .taskCard{
-  @apply flex bg-[#FF9B50] text-black
+  @apply flex items-center justify-center bg-[#FF9B50] text-black
 }
 
 .taskDescription{
@@ -40,7 +40,7 @@ body{
 }
 
 .taskButtons{
-  @apply flex flex-col items-center justify-center rounded
+  @apply p-4 flex flex-col items-center justify-center rounded
 }
 
 .editButton{
