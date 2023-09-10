@@ -52,11 +52,11 @@ body{
 }
 
 .taskDescription{
-  @apply min-w-min p-4 flex flex-col items-center justify-center rounded
+  @apply min-w-min p-4 md:p-5 flex flex-col items-center justify-center rounded
 }
 
 .taskButtons{
-  @apply min-w-min p-4 gap-2 flex items-center justify-center rounded text-sm font-light
+  @apply min-w-min p-4 md:p-5 gap-2 md:gap-3 flex items-center justify-center rounded text-sm font-light
 }
 
 .editButton{
