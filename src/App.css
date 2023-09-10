@@ -40,11 +40,11 @@ body{
 }
 
 .taskButtons{
-  @apply p-4 flex items-center justify-center rounded text-sm font-light
+  @apply p-4 gap-2 flex items-center justify-center rounded text-sm font-light
 }
 
 .editButton{
-  @apply mx-2 px-2 rounded bg-[#FFBB5C] shadow-2xl
+  @apply px-2 rounded bg-[#FFBB5C] shadow-2xl
 }
 
 .deleteButton{
