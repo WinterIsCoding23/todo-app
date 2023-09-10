@@ -31,7 +31,7 @@ const TaskList = ({ todo, deleteTask, editTask }: Props) => {
         ))
       ) : (
         <p className="col-span-4 font-bold text-center">
-          "Don't have anything to do? Get moving and add some tasks!"
+          "Nothing to do? Get moving and add some tasks!"
         </p>
       )}
     </div>
