@@ -25,7 +25,7 @@ body{
 }
 
 .inputMask > input {
-  @apply block min-[300px]:font-normal max-w-full ring ring-[#FF9B50] focus:ring-blue-500 text-[#FF9B50]
+  @apply tiny:font-normal ring ring-[#FF9B50] focus:ring-blue-500 text-[#FF9B50]
 }
 
 .inputMask ::placeholder{

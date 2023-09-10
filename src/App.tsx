@@ -78,6 +78,7 @@ function App() {
             type="text"
             id="task"
             name="task"
+            maxLength={20}
             value={formInput.task}
             onChange={(e) =>
               setFormInput({ ...formInput, task: e.target.value })
