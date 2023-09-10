@@ -90,7 +90,7 @@ function App() {
             Deadline
           </label>
           <input
-            type="text"
+            type="date"
             id="deadline"
             name="deadline"
             value={formInput.deadline}
