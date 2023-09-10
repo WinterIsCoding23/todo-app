@@ -24,7 +24,7 @@ body{
 }
 
 form > input {
-  @apply min-[300px]:font-normal max-w-full focus:ring-blue-500 focus:border-blue-500
+  @apply min-[300px]:font-normal max-w-full ring ring-[#FF9B50] focus:ring-blue-500 
 }
 
 .inputButton{
