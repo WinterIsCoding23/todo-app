@@ -7,8 +7,12 @@ interface Props {
 const TaskList = ({ todo, deleteTask, editTask }: Props) => {
   const sortedTodo = [...todo].reverse();
 
+  const numColumns = Math.min(4, Math.max(1, sortedTodo.length));
+
   return (
-    <div className="taskContainer">
+    <div
+      className={`taskContainer grid grid-cols-${numColumns} gap-4 justify-center`}
+    >
       {sortedTodo.length > 0 ? (
         sortedTodo.map((task, index) => (
           <div key={index} className="taskCard">
