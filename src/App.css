@@ -23,6 +23,10 @@ body{
   @apply p-5 flex flex-col items-center justify-center border-solid border-2 border-gray-900 rounded
 }
 
+form > input {
+  @apply min-[300px]:font-normal max-w-full focus:ring-blue-500 focus:border-blue-500
+}
+
 .inputButton{
   @apply mt-3 bg-[#FF9B50] hover:bg-[#E25E3E] text-white font-bold py-2 px-4 rounded-full
 }
@@ -44,7 +48,7 @@ body{
 }
 
 .editButton{
-  @apply px-2 rounded bg-[#FFBB5C]  hover:font-bold shadow-2xl
+  @apply px-2 rounded bg-[#FFBB5C] hover:font-bold shadow-2xl
 }
 
 .deleteButton{
