@@ -48,15 +48,15 @@ body{
 }
 
 .taskCard{
-  @apply max-w-[50%] flex flex-col items-center justify-center bg-[#FF9B50] text-black rounded-2xl shadow-2xl hover:scale-110 hover:ring  hover:ring-[#E25E3E]
+  @apply min-w-min max-w-[50%] flex flex-col items-center justify-center bg-[#FF9B50] text-black rounded-2xl shadow-2xl hover:scale-110 hover:ring  hover:ring-[#E25E3E]
 }
 
 .taskDescription{
-  @apply p-4 flex flex-col items-center justify-center rounded
+  @apply min-w-min p-4 flex flex-col items-center justify-center rounded
 }
 
 .taskButtons{
-  @apply p-4 gap-2 flex items-center justify-center rounded text-sm font-light
+  @apply min-w-min p-4 gap-2 flex items-center justify-center rounded text-sm font-light
 }
 
 .editButton{
