@@ -4,5 +4,65 @@
 }
 
 body{
-  @apply bg-sky-900
+  @apply bg-[#FFBB5C] text-[#C63D2F] 
 }
+
+.App{
+  @apply m-5 flex flex-col justify-center content-center
+}
+
+.header{
+  @apply p-5 flex flex-col items-center justify-center rounded
+}
+
+.header h1{
+  @apply font-extrabold
+}
+
+/*------------------------App---------------------- */
+.inputMask{
+  @apply mb-5 p-5 flex flex-col items-center justify-center rounded
+}
+
+.inputMask ::placeholder{
+  @apply text-[#FF9B50]
+}
+
+.taskInputContainer > input,
+.deadlineInputContainer > input {
+  @apply tiny:font-normal ring ring-[#FF9B50] focus:ring-blue-500 text-[#FF9B50]
+}
+
+.taskInputContainer, 
+.deadlineInputContainer {
+  @apply w-full flex flex-col items-center justify-center
+}
+
+.inputButton{
+  @apply mt-3 bg-[#FF9B50] hover:bg-[#E25E3E] text-white font-bold py-2 px-4 rounded-full
+}
+
+/*------------------------TaskList---------------------- */
+.taskContainer{
+  @apply min-w-min rounded grid grid-flow-dense grid-flow-row auto-rows-min sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 items-center justify-center
+}
+
+.taskCard{
+  @apply min-w-min max-w-[50%] flex flex-col items-center justify-center bg-[#FF9B50] text-black rounded-2xl shadow-2xl hover:scale-110 hover:ring  hover:ring-[#E25E3E]
+}
+
+.taskDescription{
+  @apply min-w-min p-4 md:p-5 flex flex-col items-center justify-center rounded
+}
+
+.taskButtons{
+  @apply min-w-min p-4 md:p-5 gap-2 md:gap-3 flex items-center justify-center rounded text-sm font-light
+}
+
+.editButton{
+  @apply px-2 rounded bg-[#FFBB5C] hover:font-bold shadow-2xl
+}
+
+.deleteButton{
+  @apply px-2 rounded bg-[#E25E3E] hover:bg-[#C63D2F] hover:font-bold shadow-2xl
+} 
