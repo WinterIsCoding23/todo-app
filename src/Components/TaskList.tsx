@@ -14,7 +14,7 @@ const TaskList = ({ todo, deleteTask, editTask }: Props) => {
           <div key={index} className="taskCard">
             <div className="taskDescription">
               <p className="font-bold">{task.newTask}</p>
-              <p>{task.newDeadline}</p>
+              <p>Deadline: {task.newDeadline}</p>
             </div>
             <div className="taskButtons">
               <button className="editButton" onClick={() => editTask(task.id)}>
