@@ -24,12 +24,18 @@ body{
   @apply mb-5 p-5 flex flex-col items-center justify-center border-solid border-2 border-gray-900 rounded
 }
 
-.inputMask > input {
+.inputMask ::placeholder{
+  @apply text-[#FF9B50]
+}
+
+.taskInputContainer > input,
+.deadlineInputContainer > input {
   @apply tiny:font-normal ring ring-[#FF9B50] focus:ring-blue-500 text-[#FF9B50]
 }
 
-.inputMask ::placeholder{
-  @apply text-[#FF9B50]
+.taskInputContainer, 
+.deadlineInputContainer {
+  @apply w-full flex flex-col items-center justify-center
 }
 
 .inputButton{

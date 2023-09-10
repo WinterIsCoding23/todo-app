@@ -71,37 +71,41 @@ function App() {
       </div>
       <form onSubmit={handleSubmit}>
         <div className="inputMask">
-          <label htmlFor="task" className="my-2 font-bold">
-            Task
-          </label>
-          <input
-            type="text"
-            id="task"
-            name="task"
-            maxLength={20}
-            value={formInput.task}
-            onChange={(e) =>
-              setFormInput({ ...formInput, task: e.target.value })
-            }
-            className="rounded w-auto min-w-[300px]"
-            placeholder="Write your task here..."
-            required
-          />
-          <label htmlFor="deadline" className="my-2 font-bold">
-            Deadline
-          </label>
-          <input
-            type="date"
-            id="deadline"
-            name="deadline"
-            value={formInput.deadline}
-            onChange={(e) =>
-              setFormInput({ ...formInput, deadline: e.target.value })
-            }
-            className="rounded w-auto min-w-[300px]"
-            placeholder="When should this task be completed?"
-            required
-          />
+          <div className="taskInputContainer">
+            <label htmlFor="task" className="my-2 font-bold">
+              Task
+            </label>
+            <input
+              type="text"
+              id="task"
+              name="task"
+              maxLength={20}
+              value={formInput.task}
+              onChange={(e) =>
+                setFormInput({ ...formInput, task: e.target.value })
+              }
+              className="rounded w-auto min-w-[300px]"
+              placeholder="Write your task here..."
+              required
+            />
+          </div>
+          <div className="deadlineInputContainer">
+            <label htmlFor="deadline" className="my-2 font-bold">
+              Deadline
+            </label>
+            <input
+              type="date"
+              id="deadline"
+              name="deadline"
+              value={formInput.deadline}
+              onChange={(e) =>
+                setFormInput({ ...formInput, deadline: e.target.value })
+              }
+              className="rounded w-auto min-w-[300px]"
+              placeholder="When should this task be completed?"
+              required
+            />
+          </div>
           <button type="submit" className="inputButton">
             OK
           </button>
