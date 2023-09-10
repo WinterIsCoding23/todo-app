@@ -44,7 +44,7 @@ body{
 }
 
 .editButton{
-  @apply my-2 px-2 border-solid border-2 border-gray-900 rounded bg-[#E25E3E]
+  @apply my-2 px-2 border-solid border-2 border-gray-900 rounded bg-[#FFBB5C]
 }
 
 .deleteButton{
