@@ -23,8 +23,8 @@ body{
   @apply p-5 flex flex-col items-center justify-center border-solid border-2 border-gray-900 rounded
 }
 
-form > input {
-  @apply min-[300px]:font-normal max-w-full ring ring-[#FF9B50] focus:ring-blue-500 
+.inputMask > input {
+  @apply block min-[300px]:font-normal max-w-full ring ring-[#FF9B50] focus:ring-blue-500 
 }
 
 .inputButton{
