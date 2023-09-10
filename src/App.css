@@ -32,7 +32,7 @@ body{
 }
 
 .taskCard{
-  @apply flex items-center justify-center bg-[#FF9B50] text-black
+  @apply flex items-center justify-center bg-[#FF9B50] text-black rounded
 }
 
 .taskDescription{
