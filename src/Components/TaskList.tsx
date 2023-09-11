@@ -7,16 +7,14 @@ interface Props {
 const TaskList = ({ todo, deleteTask, editTask }: Props) => {
   const sortedTodo = [...todo].reverse();
 
-  const numColumns = Math.min(4, Math.max(1, sortedTodo.length));
-  // const numRows = Math.ceil(sortedTodo.length / numColumns);
+  // const numColumns = Math.min(4, Math.max(1, sortedTodo.length));
+  // const numRows = sortedTodo.length > 4 ? Math.ceil(sortedTodo.length / 4) : 1;
 
   return (
-    <div
-      className={`taskContainer grid grid-cols-${numColumns} gap-4 justify-center items-center`}
-    >
+    <div className="taskContainer flex flex-wrap gap-4 justify-center content-center">
       {sortedTodo.length > 0 ? (
         sortedTodo.map((task, index) => (
-          <div key={index} className="taskCard">
+          <div key={index} className="taskCard flex-shrink-0 w-1/5">
             <div className="taskDescription">
               <p className="font-bold">{task.newTask}</p>
               <p>Deadline: {task.newDeadline}</p>

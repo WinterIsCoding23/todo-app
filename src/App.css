@@ -7,7 +7,7 @@ body{
   @apply bg-[#FFBB5C] text-[#C63D2F] 
 }
 
-.App{
+.main{
   @apply m-5 flex flex-col justify-center content-center
 }
 
