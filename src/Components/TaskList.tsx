@@ -7,9 +7,6 @@ interface Props {
 const TaskList = ({ todo, deleteTask, editTask }: Props) => {
   const sortedTodo = [...todo].reverse();
 
-  // const numColumns = Math.min(4, Math.max(1, sortedTodo.length));
-  // const numRows = sortedTodo.length > 4 ? Math.ceil(sortedTodo.length / 4) : 1;
-
   return (
     <div className="taskContainer flex flex-wrap gap-4 justify-center content-center">
       {sortedTodo.length > 0 ? (
