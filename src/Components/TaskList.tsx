@@ -11,7 +11,7 @@ const TaskList = ({ todo, deleteTask, editTask }: Props) => {
 
   return (
     <div
-      className={`taskContainer grid grid-cols-${numColumns} gap-4 justify-center`}
+      className={`taskContainer grid grid-cols-${numColumns} gap-4 justify-center items-center`}
     >
       {sortedTodo.length > 0 ? (
         sortedTodo.map((task, index) => (
@@ -34,7 +34,7 @@ const TaskList = ({ todo, deleteTask, editTask }: Props) => {
           </div>
         ))
       ) : (
-        <p className="col-span-4 font-bold text-center sm:col-span-3 md:col-span-4 md:col-span-5">
+        <p className="col-span-4 font-bold text-center sm:col-span-3 md:col-span-4 lg:col-span-5">
           "Nothing to do? Oh come on - hit the keyboard and add some tasks!"
         </p>
       )}
