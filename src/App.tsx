@@ -66,51 +66,53 @@ function App() {
 
   return (
     <div className="App">
-      <div className="header">
-        <h1 className="title">The Ultimate ToDo-List</h1>
-      </div>
-      <form onSubmit={handleSubmit}>
-        <div className="inputMask">
-          <div className="taskInputContainer">
-            <label htmlFor="task" className="my-2 font-bold">
-              Task
-            </label>
-            <input
-              type="text"
-              id="task"
-              name="task"
-              maxLength={20}
-              value={formInput.task}
-              onChange={(e) =>
-                setFormInput({ ...formInput, task: e.target.value })
-              }
-              className="rounded w-auto min-w-[300px]"
-              placeholder="Write your task here..."
-              required
-            />
-          </div>
-          <div className="deadlineInputContainer">
-            <label htmlFor="deadline" className="my-2 font-bold">
-              Deadline
-            </label>
-            <input
-              type="date"
-              id="deadline"
-              name="deadline"
-              value={formInput.deadline}
-              onChange={(e) =>
-                setFormInput({ ...formInput, deadline: e.target.value })
-              }
-              className="rounded w-auto min-w-[300px]"
-              placeholder="When should this task be completed?"
-              required
-            />
-          </div>
-          <button type="submit" className="inputButton">
-            OK
-          </button>
+      <div className="main">
+        <div className="header">
+          <h1 className="title">The Ultimate ToDo-List</h1>
         </div>
-      </form>
+        <form onSubmit={handleSubmit}>
+          <div className="inputMask">
+            <div className="taskInputContainer">
+              <label htmlFor="task" className="my-2 font-bold">
+                Task
+              </label>
+              <input
+                type="text"
+                id="task"
+                name="task"
+                maxLength={35}
+                value={formInput.task}
+                onChange={(e) =>
+                  setFormInput({ ...formInput, task: e.target.value })
+                }
+                className="rounded w-auto min-w-[300px]"
+                placeholder="Write your task here..."
+                required
+              />
+            </div>
+            <div className="deadlineInputContainer">
+              <label htmlFor="deadline" className="my-2 font-bold">
+                Deadline
+              </label>
+              <input
+                type="date"
+                id="deadline"
+                name="deadline"
+                value={formInput.deadline}
+                onChange={(e) =>
+                  setFormInput({ ...formInput, deadline: e.target.value })
+                }
+                className="rounded w-auto min-w-[300px]"
+                placeholder="When should this task be completed?"
+                required
+              />
+            </div>
+            <button type="submit" className="inputButton">
+              OK
+            </button>
+          </div>
+        </form>
+      </div>
       <TaskList todo={todo} deleteTask={deleteTask} editTask={editTask} />
     </div>
   );
