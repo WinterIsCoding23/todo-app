@@ -53,11 +53,6 @@ function App() {
     const taskValue = formData.get("task") as string;
     const deadlineValue = formData.get("deadline") as string;
 
-    // const formJson: Record<string, FormDataEntryValue> = Object.fromEntries(
-    //   formData.entries()
-    // );
-    // console.log(formJson.task, formJson.deadline);
-
     if (taskValue !== "" && deadlineValue !== "") {
       addTask(e);
     }
