@@ -8,6 +8,7 @@ const TaskList = ({ todo, deleteTask, editTask }: Props) => {
   const sortedTodo = [...todo].reverse();
 
   const numColumns = Math.min(4, Math.max(1, sortedTodo.length));
+  // const numRows = Math.ceil(sortedTodo.length / numColumns);
 
   return (
     <div
