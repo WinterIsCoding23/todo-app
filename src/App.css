@@ -39,7 +39,7 @@ body{
 }
 
 .inputButton{
-  @apply mt-3 bg-[#FF9B50] hover:bg-[#E25E3E] text-white font-bold py-2 px-4 rounded-full dark:bg-[#93B1A6] dark:text-[#040D12]
+  @apply mt-3 bg-[#FF9B50] hover:bg-[#E25E3E] text-white font-bold py-2 px-4 rounded-full dark:bg-[#93B1A6] dark:hover:bg-[#183D3D] dark:text-[#040D12]
 }
 
 /*------------------------TaskList---------------------- */
