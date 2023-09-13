@@ -103,7 +103,7 @@ function App() {
               />
             </div>
             <button type="submit" className="inputButton">
-              OK
+              Save task
             </button>
           </div>
         </form>
