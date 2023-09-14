@@ -1,3 +1,5 @@
+import photo from "../images/lazyBone.jpg";
+
 interface Props {
   todo: { id: number; newTask: string; newDeadline: string }[];
   deleteTask: (id: number) => void;
@@ -30,9 +32,16 @@ const TaskList = ({ todo, deleteTask, editTask }: Props) => {
           </div>
         ))
       ) : (
-        <p className="defaultMessage">
-          "Nothing to do? Oh come on - hit the keyboard and add some tasks!"
-        </p>
+        <div className="defaultMessage">
+          <p>
+            "Nothing to do? Oh come on - stop being lazy and add some tasks!"
+          </p>
+          <img
+            src={photo}
+            alt="yawning dog in front of white background"
+            style={{ width: 500, height: 400 }}
+          />
+        </div>
       )}
     </div>
   );
