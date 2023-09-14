@@ -20,11 +20,14 @@ const TaskList = ({ todo, deleteTask, editTask }: Props) => {
               <p>{task.newDeadline}</p>
             </div>
             <div className="taskButtons">
-              <button className="editButton" onClick={() => editTask(task.id)}>
+              <button
+                className="editButton w-14 flex justify-center items-center"
+                onClick={() => editTask(task.id)}
+              >
                 Edit
               </button>
               <button
-                className="deleteButton"
+                className="deleteButton w-14 flex justify-center items-center"
                 onClick={() => deleteTask(task.id)}
               >
                 Delete
