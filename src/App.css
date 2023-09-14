@@ -60,11 +60,11 @@ body{
 }
 
 .editButton{
-  @apply px-2 rounded bg-[#FFBB5C] hover:font-bold shadow-2xl dark:bg-[#183D3D] dark:text-white
+  @apply px-5 py-2 rounded bg-[#FFBB5C] hover:font-bold shadow-2xl dark:bg-[#183D3D] dark:text-white
 }
 
 .deleteButton{
-  @apply px-2 rounded bg-[#E25E3E] hover:bg-[#C63D2F] hover:font-bold shadow-2xl dark:text-white
+  @apply px-5 py-2 rounded bg-[#E25E3E] hover:bg-[#C63D2F] hover:font-bold shadow-2xl dark:text-white
 } 
 
 .defaultContainer{
