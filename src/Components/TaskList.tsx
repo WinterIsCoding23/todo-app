@@ -11,29 +11,22 @@ interface Props {
 const TaskList = ({ todo, deleteTask, editTask }: Props) => {
   const sortedTodo = [...todo].reverse();
 
-  const [imageSrc, setImageSrc] = useState(lazy);
+  const [showJumpImage, setShowJumpImage] = useState(false);
   const [imageAlt, setImageAlt] = useState(
     "yawning dog in front of white background"
   );
-  const [imageClasses, setImageClasses] = useState(
-    "w-full h-auto object-contain rounded"
-  );
 
   const handleImageHover = () => {
-    if (imageSrc !== jump) {
-      setImageSrc(jump);
-      setImageAlt("three happy jumping people");
-      setImageClasses(
-        "w-full pt-4 h-auto object-contain rounded hover:scale-110"
-      );
+    if (!showJumpImage) {
+      setShowJumpImage(true);
+      setImageAlt("the happy jumping people");
     }
   };
 
   const handleImageLeave = () => {
-    if (imageSrc !== lazy) {
-      setImageSrc(lazy);
+    if (showJumpImage) {
+      setShowJumpImage(false);
       setImageAlt("yawning dog in front of white background");
-      setImageClasses("w-full h-auto object-contain rounded");
     }
   };
 
@@ -68,13 +61,26 @@ const TaskList = ({ todo, deleteTask, editTask }: Props) => {
           <p className="defaultMessage">
             "Nothing to do? Oh come on - stop being lazy and add some tasks!"
           </p>
-          <img
-            src={imageSrc}
-            alt={imageAlt}
-            className={imageClasses}
+          <div
+            className="relative w-full aspect-[16/9] overflow-hidden rounded"
             onMouseOver={handleImageHover}
             onMouseLeave={handleImageLeave}
-          />
+          >
+            <img
+              src={lazy}
+              alt={imageAlt}
+              className={`absolute w-full h-full object-cover rounded transition-opacity duration-1000 ${
+                showJumpImage ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <img
+              src={jump}
+              alt={imageAlt}
+              className={`w-full h-full object-cover rounded transition-opacity duration-1000 ${
+                showJumpImage ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          </div>
         </div>
       )}
     </div>
