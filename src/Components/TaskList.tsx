@@ -16,7 +16,7 @@ const TaskList = ({ todo, deleteTask, editTask }: Props) => {
           <div key={index} className="taskCard">
             <div className="taskDescription">
               <p className="font-bold">{task.newTask}</p>
-              <p>Deadline:</p>
+              <p className="italic">Deadline:</p>
               <p>{task.newDeadline}</p>
             </div>
             <div className="taskButtons">
