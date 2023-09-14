@@ -32,14 +32,14 @@ const TaskList = ({ todo, deleteTask, editTask }: Props) => {
           </div>
         ))
       ) : (
-        <div className="defaultMessage">
-          <p>
+        <div className="defaultContainer">
+          <p className="defaultMessage">
             "Nothing to do? Oh come on - stop being lazy and add some tasks!"
           </p>
           <img
             src={photo}
             alt="yawning dog in front of white background"
-            style={{ width: 500, height: 400 }}
+            className="w-full h-auto object-contain rounded"
           />
         </div>
       )}

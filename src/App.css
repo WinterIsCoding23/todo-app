@@ -67,6 +67,10 @@ body{
   @apply px-2 rounded bg-[#E25E3E] hover:bg-[#C63D2F] hover:font-bold shadow-2xl dark:text-white
 } 
 
+.defaultContainer{
+  @apply m-20 col-span-4 font-bold text-center sm:col-span-3 md:col-span-4 lg:col-span-5
+}
+
 .defaultMessage{
-  @apply col-span-4 font-bold text-center sm:col-span-3 md:col-span-4 lg:col-span-5
+  @apply mb-5
 }
