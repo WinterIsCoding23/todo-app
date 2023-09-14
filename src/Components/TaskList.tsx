@@ -1,4 +1,6 @@
-import photo from "../images/lazyBone.jpg";
+import React, { useState } from "react";
+import lazy from "../images/lazyBone.jpg";
+import jump from "../images/jump.jpg";
 
 interface Props {
   todo: { id: number; newTask: string; newDeadline: string }[];
@@ -8,6 +10,21 @@ interface Props {
 
 const TaskList = ({ todo, deleteTask, editTask }: Props) => {
   const sortedTodo = [...todo].reverse();
+
+  const [imageSrc, setImageSrc] = useState(lazy);
+  const [imageAlt, setImageAlt] = useState(
+    "yawning dog in front of white background"
+  );
+
+  const handleImageHover = () => {
+    setImageSrc(jump);
+    setImageAlt("three happy jumping people");
+  };
+
+  const handleImageLeave = () => {
+    setImageSrc(lazy);
+    setImageAlt("yawning dog in front of white background");
+  };
 
   return (
     <div className="taskContainer">
@@ -41,9 +58,11 @@ const TaskList = ({ todo, deleteTask, editTask }: Props) => {
             "Nothing to do? Oh come on - stop being lazy and add some tasks!"
           </p>
           <img
-            src={photo}
-            alt="yawning dog in front of white background"
-            className="w-full h-auto object-contain rounded"
+            src={imageSrc}
+            alt={imageAlt}
+            className="w-full h-auto object-contain rounded hover:scale-110"
+            onMouseOver={handleImageHover}
+            onMouseLeave={handleImageLeave}
           />
         </div>
       )}
