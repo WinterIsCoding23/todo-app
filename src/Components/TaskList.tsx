@@ -62,7 +62,7 @@ const TaskList = ({ todo, deleteTask, editTask }: Props) => {
             "Nothing to do? Oh come on - stop being lazy and add some tasks!"
           </p>
           <div
-            className="relative w-full aspect-[16/9] overflow-hidden rounded"
+            className="relative w-full aspect-[16/9] md:w-[500px] lg:w-[600px] overflow-hidden rounded"
             onMouseOver={handleImageHover}
             onMouseLeave={handleImageLeave}
           >
