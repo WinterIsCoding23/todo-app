@@ -15,15 +15,26 @@ const TaskList = ({ todo, deleteTask, editTask }: Props) => {
   const [imageAlt, setImageAlt] = useState(
     "yawning dog in front of white background"
   );
+  const [imageClasses, setImageClasses] = useState(
+    "w-full h-auto object-contain rounded"
+  );
 
   const handleImageHover = () => {
-    setImageSrc(jump);
-    setImageAlt("three happy jumping people");
+    if (imageSrc !== jump) {
+      setImageSrc(jump);
+      setImageAlt("three happy jumping people");
+      setImageClasses(
+        "w-full pt-4 h-auto object-contain rounded hover:scale-110"
+      );
+    }
   };
 
   const handleImageLeave = () => {
-    setImageSrc(lazy);
-    setImageAlt("yawning dog in front of white background");
+    if (imageSrc !== lazy) {
+      setImageSrc(lazy);
+      setImageAlt("yawning dog in front of white background");
+      setImageClasses("w-full h-auto object-contain rounded");
+    }
   };
 
   return (
@@ -60,7 +71,7 @@ const TaskList = ({ todo, deleteTask, editTask }: Props) => {
           <img
             src={imageSrc}
             alt={imageAlt}
-            className="w-full h-auto object-contain rounded hover:scale-110"
+            className={imageClasses}
             onMouseOver={handleImageHover}
             onMouseLeave={handleImageLeave}
           />
